@@ -14,11 +14,15 @@
       <T.AmbientLight intensity={0.5} />
       <T.PointLight position={[0, 5, 5]} intensity={1} color="#00ffff" />
       <T.DirectionalLight position={[-5, 5, -5]} intensity={0.5} color="#0080ff" />
+
+      <!-- Examples -->
+
+      <ShinyPop />
       <!-- <ScreenCover /> -->
-      <!-- <ShinyPop /> -->
       <!-- <VoidStar /> -->
       <!-- <Waves /> -->
-      <Illusion />
+      <!-- <Illusion /> -->
+
     </Canvas>
   </div>
 </div>
@@ -29,9 +33,8 @@
     height: 100vh;
     position: relative;
     margin: 0;
-    background: black;
-    /* background: linear-gradient(65deg, rgba(21,33,47,1) 0%, rgba(29,51,100,1) 60%); */
-
+    /* background: black; */ /* For VoidStar, Waves and Illusion */ 
+    background: linear-gradient(65deg, rgba(21,33,47,1) 0%, rgba(29,51,100,1) 60%); /* For ShinyPop and ScreenCover */ 
   }
 
   .size-full {

@@ -1,11 +1,18 @@
 <script lang="ts">
   import { SphereGeometry, Vector3 } from "three";
-  import { BubbleEventEmitter } from "$lib/events/bubbleEvents";
+  import { BubbleEventEmitter } from "$lib/events/BubbleEventEmitter";
   import type { BubbleParams } from "$lib/types/bubble";
   import { ParamsStore } from "$lib/stores/ParamsStore";
   import Bubble from "$lib/components/Bubble.svelte";
 
   const eventEmitter = new BubbleEventEmitter();
+
+  // Events usage example
+
+  // onMount(() => {
+  //   eventEmitter.addListener('creationStarted', () => console.log("Bubble created"));
+  //   eventEmitter.addListener('removalFinished', () => console.log("Bubble removed"));
+  // });
 
   // Bubble configuration
   const bubbleConfig: BubbleParams = {
@@ -49,4 +56,4 @@
 
 </script>
 
-<Bubble data={bubbleParams} />
+<Bubble data={bubbleParams} {eventEmitter} />

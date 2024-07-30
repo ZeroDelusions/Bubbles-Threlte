@@ -1,6 +1,5 @@
 import { BubbleStore } from '$lib/stores/BubbleStore';
 import type { BubbleParams } from '$lib/types/bubble';
-import { useFrame } from '@threlte/core';
 import { SphereGeometry, Vector3 } from 'three';
 import { describe, it, expect, beforeEach, afterEach, type DoneCallback, vi } from 'vitest';
 

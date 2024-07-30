@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { ParamsStore } from '../lib/stores/ParamsStore'
+import { ParamsStore } from '$lib/stores/ParamsStore'
 
 describe('ParamsStore', () => {
     let paramsStore: ParamsStore<{ count: number; name: string }>;

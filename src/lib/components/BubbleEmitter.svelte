@@ -3,7 +3,7 @@
   import Bubble from "./Bubble.svelte";
   import { BubbleStore } from "../stores/BubbleStore";
   import type { BubbleEmitterParams, BubbleParams } from "../types/bubble";
-  import { BubbleEventEmitter } from "../events/bubbleEvents";
+  import { BubbleEventEmitter } from "../events/BubbleEventEmitter";
   import { addRandomRotation } from "../utils/animation";
   import { onMount } from "svelte";
 

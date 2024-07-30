@@ -2,31 +2,22 @@
   import { SphereGeometry, Vector3 } from "three";
   import { useFrame } from "@threlte/core";
   import BubbleEmitter from "$lib/components/BubbleEmitter.svelte";
-  import { BubbleEventEmitter } from "$lib/events/bubbleEvents";
+  import { BubbleEventEmitter } from "$lib/events/BubbleEventEmitter";
   import type { BubbleEmitterParams, BubbleParams } from "$lib/types/bubble";
   import { ParamsStore } from "$lib/stores/ParamsStore";
 
   const eventEmitter = new BubbleEventEmitter();
 
+  // Events usage example
+
+  // onMount(() => {
+  //   eventEmitter.addListener('creationStarted', () => console.log("Bubble created"));
+  //   eventEmitter.addListener('removalFinished', () => console.log("Bubble removed"));
+  // });
+
   let mousePosition = new Vector3();
   let mouseVelocity = new Vector3();
   let lastMousePosition = new Vector3();
-
-  function handleMouseMove(event: MouseEvent) {
-    mousePosition.set(
-      event.clientX - window.innerWidth / 2,
-      -event.clientY + window.innerHeight / 2,
-      0
-    );
-    mouseVelocity.subVectors(mousePosition, lastMousePosition);
-
-    if (mouseVelocity.length() > 30) {
-      mouseVelocity.setLength(30);
-    }
-
-    mouseVelocity.multiplyScalar(-0.2);
-    lastMousePosition.copy(mousePosition);
-  }
 
   // Emitter configuration
   const emitterConfig: BubbleEmitterParams = {
@@ -117,6 +108,25 @@
   bubbleStore.subscribe((value) => {
     bubbleParams = value;
   });
+
+  function handleMouseMove(event: MouseEvent) {
+    mousePosition.set(
+      event.clientX - window.innerWidth / 2,
+      -event.clientY + window.innerHeight / 2,
+      0
+    );
+    mouseVelocity.subVectors(mousePosition, lastMousePosition);
+
+    if (mouseVelocity.length() > 30) {
+      mouseVelocity.setLength(30);
+    }
+
+    mouseVelocity.multiplyScalar(-0.2);
+    lastMousePosition.copy(mousePosition);
+  }
+
+  // This function is responsible for updating the state in each frame.
+  // New bubbles are spawned based on changing values, effectively initializing a bubble for each new value.
 
   useFrame(() => {
     bubbleStore.updatePartial({

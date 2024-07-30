@@ -1,2 +1,2 @@
-export { default as Bubble } from '$lib/components/Bubble.svelte';
-export { default as BubbleEmitter } from '$lib/components/BubbleEmitter.svelte';
+export { default as Bubble } from './components/Bubble.svelte';
+export { default as BubbleEmitter } from './components/BubbleEmitter.svelte';

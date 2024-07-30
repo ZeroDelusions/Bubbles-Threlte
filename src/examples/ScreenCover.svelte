@@ -2,11 +2,18 @@
   import { SphereGeometry, Vector3 } from "three";
   import { useFrame } from "@threlte/core";
   import BubbleEmitter from "$lib/components/BubbleEmitter.svelte";
-  import { BubbleEventEmitter } from "$lib/events/bubbleEvents";
+  import { BubbleEventEmitter } from "$lib/events/BubbleEventEmitter";
   import type { BubbleEmitterParams, BubbleParams } from "$lib/types/bubble";
   import { ParamsStore } from "$lib/stores/ParamsStore";
 
   const eventEmitter = new BubbleEventEmitter();
+
+  // Events usage example
+
+  // onMount(() => {
+  //   eventEmitter.addListener('creationStarted', () => console.log("Bubble created"));
+  //   eventEmitter.addListener('removalFinished', () => console.log("Bubble removed"));
+  // });
 
   // Emitter configuration
   const emitterConfig: BubbleEmitterParams = {
@@ -86,6 +93,9 @@
   bubbleStore.subscribe((value) => {
     bubbleParams = value;
   });
+
+  // This function is responsible for updating the state in each frame.
+  // New bubbles are spawned based on changing values, effectively initializing a bubble for each new value.
 
   useFrame(() => {
     const bubbleOrigin = new Vector3(

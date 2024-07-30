@@ -125,10 +125,6 @@ float snoise(vec3 v)
                                 dot(p2,x2), dot(p3,x3) ) );
 }
 
-// float rand(vec2 co){
-//     return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
-// }
-
 void main() {
     vUv = uv;
     vNormal = normal;

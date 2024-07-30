@@ -5,7 +5,7 @@
   import vertexShader from "../shaders/vertexShader.glsl?raw";
   import fragmentShader from "../shaders/fragmentShader.glsl?raw";
   import type { BubbleParams } from "../types/bubble";
-  import { BubbleEventEmitter } from "../events/bubbleEvents";
+  import { BubbleEventEmitter } from "../events/BubbleEventEmitter";
 
   export let data: BubbleParams;
   export let eventEmitter: BubbleEventEmitter | undefined = undefined;
@@ -14,10 +14,8 @@
   let startTime = 0;
 
   let bubbleMaterial: ShaderMaterial;
-  // $: updateBubbleMaterial(bubbleMaterial, data);
 
   function createBubbleMaterial(params: BubbleParams): ShaderMaterial {
-    // bubbleMaterial.dispose();
     return new ShaderMaterial({
       uniforms: {
         time: { value: 0 },
