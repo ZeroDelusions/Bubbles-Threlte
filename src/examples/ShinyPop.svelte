@@ -23,7 +23,8 @@
   const emitterConfig: BubbleEmitterParams = {
     spawnCondition: false,
     bubbleSize: { min: 2, max: 5 },
-    scatterAngle: { min: -30, max: 30 },
+    scatterAngle: { min: -60, max: 60 },
+    maxBubbles: 100
   };
 
   // Bubble configuration
@@ -48,11 +49,11 @@
     reflectionColor: new Vector3(1.0, 1.0, 1.0),
     baseAlpha: 0.1,
     borderAlpha: 0.6,
-    glowStrength: 1.6,
-    gradientStrength: 0.4,
+    glowStrength: 0.4,
+    gradientStrength: 0.2,
     gradientSpeed: 0.1,
     fresnel: new Vector3(0.0, 0.0, 1.0),
-    fresnelStrength: 3.0,
+    fresnelStrength: 0.0,
     noiseFrequency: 0.8,
     noiseAmplitude: 0.1,
     seed: Math.random() * 1000,
@@ -110,18 +111,21 @@
   });
 
   function handleMouseMove(event: MouseEvent) {
-    mousePosition.set(
+    mousePosition = new Vector3(
       event.clientX - window.innerWidth / 2,
       -event.clientY + window.innerHeight / 2,
       0
     );
-    mouseVelocity.subVectors(mousePosition, lastMousePosition);
-
-    if (mouseVelocity.length() > 30) {
+    let newVelocity = mouseVelocity.subVectors(mousePosition, lastMousePosition);
+    if (newVelocity.length() > 30) {
       mouseVelocity.setLength(30);
     }
+    newVelocity.multiplyScalar(-0.2);
+    
+    mouseVelocity = newVelocity;
+    
 
-    mouseVelocity.multiplyScalar(-0.2);
+    
     lastMousePosition.copy(mousePosition);
   }
 
@@ -137,7 +141,7 @@
     });
     emitterStore.updatePartial({
       spawnCondition:
-        Math.random() >= (1 / Math.pow(mouseVelocity.length(), 1.2)) * 2,
+        Math.random() >= (1 / Math.pow(mouseVelocity.length(), 1.2)),
     });
   });
 </script>

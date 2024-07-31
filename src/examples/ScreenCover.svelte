@@ -70,7 +70,7 @@
       params: (bubble: BubbleParams) => {
         bubble.position.add(bubble.velocity);
         bubble.size *= 1.005;
-        bubble.fresnelStrength += 0.01 * bubble.velocity.y;
+        bubble.fresnelStrength += 0.04 * bubble.velocity.y;
         bubble.opacity += bubble.velocity.y / 200;
         bubble.position.x =
           bubble.origin.x +

@@ -33,8 +33,11 @@
     height: 100vh;
     position: relative;
     margin: 0;
-    /* background: black; */ /* For VoidStar, Waves and Illusion */ 
-    background: linear-gradient(65deg, rgba(21,33,47,1) 0%, rgba(29,51,100,1) 60%); /* For ShinyPop and ScreenCover */ 
+    /* For VoidStar, Waves and Illusion */ 
+    /* background: black;  */
+
+    /* For ShinyPop and ScreenCover */ 
+    background: linear-gradient(65deg, rgba(21,33,47,1) 0%, rgba(29,51,100,1) 60%); 
   }
 
   .size-full {

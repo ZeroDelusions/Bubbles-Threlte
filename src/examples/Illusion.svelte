@@ -40,7 +40,7 @@
     gradientStrength: 0.0,
     gradientSpeed: 0.1,
     fresnel: new Vector3(0.0, 0.0, 1.0),
-    fresnelStrength: 0.8,
+    fresnelStrength: 1.0,
     noiseFrequency: 4.0,
     noiseAmplitude: 0.001,
     seed: Math.random() * 1000

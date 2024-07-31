@@ -11,8 +11,7 @@
   export let bubbleParams: BubbleParams;
   export let eventEmitter: BubbleEventEmitter;
 
-  const bubbleStore = new BubbleStore(emitterParams.maxBubbles, true, true
-  );
+  const bubbleStore = new BubbleStore(emitterParams.maxBubbles, true);
 
   function createBubble(): void {
     if (shouldCreateBubble()) {
