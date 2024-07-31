@@ -1,4 +1,4 @@
-import type { BubbleParams } from '../types/bubble';
+import type { BubbleParams } from '../types/bubbleParams';
 
 export type BubbleEventType = 'creationStarted' | 'creationFinished' | 'removalStarted' | 'removalFinished' | 'move';
 

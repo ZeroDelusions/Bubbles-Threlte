@@ -3,7 +3,8 @@
   import { useFrame } from "@threlte/core";
   import BubbleEmitter from "$lib/components/BubbleEmitter.svelte";
   import { BubbleEventEmitter } from "$lib/events/BubbleEventEmitter";
-  import type { BubbleEmitterParams, BubbleParams } from "$lib/types/bubble";
+  import type { BubbleParams } from "$lib/types/bubbleParams";
+  import type { BubbleEmitterParams } from "$lib/types/bubbleEmitterParams";
   import { ParamsStore } from "$lib/stores/ParamsStore";
 
   const eventEmitter = new BubbleEventEmitter();

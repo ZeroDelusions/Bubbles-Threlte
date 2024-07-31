@@ -1,7 +1,7 @@
 <script lang="ts">
   import { SphereGeometry, Vector3 } from "three";
   import { BubbleEventEmitter } from "$lib/events/BubbleEventEmitter";
-  import type { BubbleParams } from "$lib/types/bubble";
+  import type { BubbleParams } from "$lib/types/bubbleParams";
   import { ParamsStore } from "$lib/stores/ParamsStore";
   import Bubble from "$lib/components/Bubble.svelte";
 

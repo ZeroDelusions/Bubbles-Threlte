@@ -2,7 +2,8 @@
   import { T, useFrame } from "@threlte/core";
   import Bubble from "./Bubble.svelte";
   import { BubbleStore } from "../stores/BubbleStore";
-  import type { BubbleEmitterParams, BubbleParams } from "../types/bubble";
+  import type { BubbleParams } from "../types/bubbleParams";
+  import type { BubbleEmitterParams } from "$lib/types/bubbleEmitterParams";
   import { BubbleEventEmitter } from "../events/BubbleEventEmitter";
   import { addRandomRotation } from "../utils/animation";
   import { onMount } from "svelte";

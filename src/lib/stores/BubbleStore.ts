@@ -1,5 +1,5 @@
 import { writable, type Writable } from 'svelte/store';
-import type { BubbleParams } from '../types/bubble';
+import type { BubbleParams } from '../types/bubbleParams';
 import { getStored } from './getStored';
 
 export class BubbleStore {

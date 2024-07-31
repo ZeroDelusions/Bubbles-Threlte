@@ -4,7 +4,7 @@
   import { onDestroy, onMount } from "svelte";
   import vertexShader from "../shaders/vertexShader.glsl?raw";
   import fragmentShader from "../shaders/fragmentShader.glsl?raw";
-  import type { BubbleParams } from "../types/bubble";
+  import type { BubbleParams } from "../types/bubbleParams";
   import { BubbleEventEmitter } from "../events/BubbleEventEmitter";
 
   export let data: BubbleParams;
