@@ -1,6 +1,6 @@
 # Bubbles-Threlte: Svelte Bubble Generator 
 
-A highly customizable bubble generator component for Svelte applications using Threlte (Three.js for Svelte). Create stunning bubble effects with ease, perfect for interactive backgrounds, particle systems, and more.
+Customizable bubble generator component for Svelte applications using Threlte (Three.js for Svelte)
 
 ## Installation
 
@@ -145,92 +145,18 @@ These events can be used to trigger custom behaviors or synchronize other elemen
 
 ## Examples
 
-<table>
-<tr>
-<td>
+### Interactive Mouse-driven Bubbles
 
-### ShinyPop: Interactive Mouse-driven Bubbles
+<img src="https://github.com/user-attachments/assets/fea2be35-5909-4810-8752-c45feae4c7c4">
 
-The ShinyPop example demonstrates how to create interactive bubbles that respond to mouse movement. 
-Key features:
+### Full-screen Bubble Animation
 
-- Bubbles spawn based on mouse velocity
-- Custom bubble physics for realistic movement
-- Smooth creation and removal animations
+<img src="https://github.com/user-attachments/assets/f3be3b7e-51ce-49d6-ba64-f4c2ad895202">
 
-This example showcases the potential for creating engaging, interactive backgrounds or particle effects that respond to user input.
+### Abstract  Effect
 
-</td>
-<td>
-  <img src="https://github.com/user-attachments/assets/fea2be35-5909-4810-8752-c45feae4c7c4">
-</picture>
-</td>
-</tr>
-<tr>
-<td>
+<img src="https://github.com/user-attachments/assets/8dc58de0-ad64-460b-a083-4298d8885325">
 
-### ScreenCover: Full-screen Bubble Animation
+### Dynamic Wave Simulation
 
-The ScreenCover example illustrates how to create a full-screen bubble animation. 
-Key features:
-
-- Bubbles rise from the bottom of the screen
-- Subtle wave-like horizontal movement
-- Gradual size increase and opacity changes
-
-This example is perfect for creating ambient background animations or loading screens with a soothing, aquatic feel.
-
-</td>
-<td>
-<picture>
-  <img src="https://github.com/user-attachments/assets/f3be3b7e-51ce-49d6-ba64-f4c2ad895202">
-</picture>
-</td>
-</tr>
-<tr>
-<td>
-
-### VoidStar: Abstract Cosmic Effect
-
-The VoidStar example creates an abstract, cosmic-like effect using a single, highly detailed bubble. 
-Key features:
-
-- High-resolution sphere geometry
-- Subtle deformations for an organic feel
-
-This example demonstrates how to use the bubble generator for creating unique, abstract visual effects beyond traditional bubble animations.
-
-
-</td>
-<td>
-<picture>
-  <img src="https://github.com/user-attachments/assets/8dc58de0-ad64-460b-a083-4298d8885325">
-</picture>
-</td>
-</tr>
-<tr>
-<td>
-
-### Waves: Dynamic Wave Simulation
-
-The Waves example showcases how to create a dynamic wave-like effect using a single, large bubble. 
-Key features:
-
-- Custom deformation parameters for wave-like movement
-- High-frequency noise for detailed surface texture
-- Fresnel effect for light interaction
-
-This example illustrates the potential for using the bubble generator to create more complex, fluid-like animations and effects.
-
-</td>
-<td>
-<picture>
-  <img src="https://github.com/user-attachments/assets/a869f540-2a04-4849-94c8-1bce3afbd8d3">
-</picture>
-</td>
-</tr>
-</table>
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+<img src="https://github.com/user-attachments/assets/a869f540-2a04-4849-94c8-1bce3afbd8d3">
